@@ -1,7 +1,7 @@
 
 <p align="center">
     <a href="https://github.com/MaicolDdox/AirHub-SENASOFT/tree/main"_blank>
-      <img src="docs/assets/logo.png" width="260" alt="Logo de CrediSeal API">
+      <img src="docs/assets/logoTipo.png" width="260" alt="Logo de CrediSeal API">
     </a>
 </p>
 
