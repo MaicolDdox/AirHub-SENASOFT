@@ -1,116 +1,116 @@
-#  Air Hub
 
-**Air Hub** es una aplicación web desarrollada en **Laravel** que permite buscar, reservar y comprar boletos de vuelo de manera rápida y sencilla.  
-El proyecto incluye autenticación de usuarios, gestión de asientos y administración mediante roles y permisos.
+<p align="center">
+    <a href="https://github.com/MaicolDdox/AirHub-SENASOFT/tree/main"_blank>
+      <img src="docs/assets/logoTipo.png" width="260" alt="Logo de CrediSeal API">
+    </a>
+</p>
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/maicol-duvan-gasca-rodas-4483923a4/?trk=public-profile-join-page" target="_blank" title="LinkedIn" style="text-decoration:none;">
+    <img src="docs/assets/social/linkedin.png" height="22" alt="LinkedIn" style="vertical-align:middle;">
+    <span style="margin-left:6px; vertical-align:middle;">LinkedIn</span>
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.instagram.com/maicolddox_?utm_source=qr&igsh=cTV6enRlMW05bjY3" target="_blank" title="Instagram" style="text-decoration:none;">
+    <img src="docs/assets/social/instagram.png" height="22" alt="Instagram" style="vertical-align:middle;">
+    <span style="margin-left:6px; vertical-align:middle;">Instagram</span>
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/MaicolDdox" target="_blank" title="GitHub" style="text-decoration:none;">
+    <img src="docs/assets/social/github.png" height="22" alt="GitHub" style="vertical-align:middle;">
+    <span style="margin-left:6px; vertical-align:middle;">GitHub</span>
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://discordapp.com/users/1425631850453270543" target="_blank" title="Discord" style="text-decoration:none;">
+    <img src="docs/assets/social/discord.png" height="22" alt="Discord" style="vertical-align:middle;">
+    <span style="margin-left:6px; vertical-align:middle;">Discord</span>
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="mailto:maicolindustriascode@gmail.com" target="_blank" title="Email" style="text-decoration:none;">
+    <img src="docs/assets/social/gmail.png" height="22" alt="Email" style="vertical-align:middle;">
+    <span style="margin-left:6px; vertical-align:middle;">Email</span>
+  </a>
+</p>
+
+<div align="center">
+  <h1>AirHub</h1>
+  <p>Plataforma de gestion y compra de vuelos desarrollada para la competencia SenaSoft.</p>
+</div>
 
 ---
 
-##  Requisitos previos
+## Descripcion
 
-Antes de ejecutar el proyecto, asegúrate de tener instaladas las siguientes dependencias:
+AirHub es una aplicacion web para administrar vuelos y permitir reservas de forma clara y segura. Incluye un panel de administracion para gestionar rutas, modelos, aerolineas y disponibilidad, junto con la experiencia del usuario final para consultar y comprar vuelos.
 
-- [Composer](https://getcomposer.org/)
-- [Node.js y NPM](https://nodejs.org/)
-- [Laravel](https://laravel.com/)
-- [Laravel Permission](https://spatie.be/docs/laravel-permission)
+## Caracteristicas principales
 
----
+**Usuario**
 
-##  Instalación
+-   Busqueda y visualizacion de vuelos disponibles.
+-   Reservas con flujo guiado y generacion de tickets.
+-   Acceso a historial de reservas y soporte.
 
-Sigue los pasos a continuación para configurar el entorno de desarrollo:
+**Administrador**
 
-### 1. Clonar el repositorio
+-   Panel admin con dashboard de indicadores.
+-   Gestion de vuelos (listado, estados, disponibilidad).
+-   Creacion y administracion de rutas, modelos y aerolineas.
+
+## Tecnologias
+
+-   Laravel 12
+-   Livewire + Volt
+-   TailwindCSS
+-   Flux (starter kit)
+-   ApexCharts
+-   Vite
+
+## Requisitos
+
+-   PHP 8.2+
+-   Composer
+-   Node.js 18+
+-   Base de datos (MySQL o SQLite)
+
+## Instalacion
+
 ```bash
-git clone https://github.com/tu-usuario/flyhub.git
-cd flyhub
-```
-2. Instalar dependencias de PHP y Node
-bash
-Copiar código
-````bash
 composer install
 npm install
-````
-3. Configurar el archivo .env
-Copia el archivo de ejemplo y edítalo según tu entorno:
+```
 
+## Configuracion
 
-Copiar código
-````bash
+```bash
 cp .env.example .env
-````
-Luego, modifica las variables de conexión a base de datos y otras configuraciones según corresponda:
-
-env
-Copiar código
-```bash
-APP_NAME=FlyHub
-APP_ENV=local
-APP_KEY=
-APP_DEBUG=true
-APP_URL=http://localhost:8000
-
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=flyhub
-DB_USERNAME=root
-DB_PASSWORD=
-````
-Finalmente, genera la clave de aplicación:
-
-bash
-Copiar código
-```bash
 php artisan key:generate
 ```
- Migraciones y Seeders
-Ejecuta las migraciones y seeders para crear las tablas y poblar los datos iniciales:
 
+Configura las variables de entorno necesarias en `.env`, especialmente las relacionadas con la base de datos.
 
-Copiar código
-````
+## Ejecutar migraciones + seeders
+
+Demo con datos cargados:
+
+```bash
 php artisan migrate --seed
-````
-Esto creará las tablas necesarias y cargará los roles, permisos y usuarios base del sistema.
+```
 
- Ejecución del proyecto
-Para iniciar el entorno de desarrollo, ejecuta los siguientes comandos en dos terminales separadas:
+O ejecuta por separado:
 
-Terminal 1 – Servidor de Laravel
+```bash
+php artisan migrate
+php artisan db:seed
+```
 
-Copiar código
+## Credenciales demo (panel administrador)
 
-````
-php artisan serve
-````
-Terminal 2 – Compilación de assets
+-   URL: `http://127.0.0.1:8000/dashboard`
+-   Email: `admin@gmail.com`
+-   Password: `admin123456`
 
-bash
-Copiar código
-````
-npm run dev
-````
-En algunos entornos también puedes usar:
+## Autores
 
-Copiar código
-````
-composer run dev
-````
-✅ Listo
-Abre tu navegador y visita:
-
-👉 http://localhost:8000
-
-Tu aplicación Fly Hub debería estar ejecutándose correctamente.
-
-     Dependencias principales
-Laravel 10+
-
-Laravel Permission (Spatie)
-
-Tailwind (según el entorno configurado)
-
-Vite + NPM
-
+-   MaicolDdox
+-   deujeanx
